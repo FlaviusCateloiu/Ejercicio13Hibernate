@@ -16,6 +16,8 @@ public class Direccion implements Serializable {
     @Column(name = "nombre_poblacion")
     private String nombrePoblacion;
     private String provincia;
+    /*@OneToOne
+    private Profesor profesor;*/
 
     public Direccion() {
     }
@@ -26,6 +28,14 @@ public class Direccion implements Serializable {
         this.nombrePoblacion = nombrePoblacion;
         this.provincia = provincia;
     }
+
+    /*public Direccion(String calle, int numero, String nombrePoblacion, String provincia, Profesor profesor) {
+        this.calle = calle;
+        this.numero = numero;
+        this.nombrePoblacion = nombrePoblacion;
+        this.provincia = provincia;
+        this.profesor = profesor;
+    }*/
 
     public int getId() {
         return id;
@@ -67,6 +77,14 @@ public class Direccion implements Serializable {
         this.provincia = provincia;
     }
 
+    /*public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }*/
+
     @Override
     public String toString() {
         return "Direccion{" +
@@ -75,6 +93,7 @@ public class Direccion implements Serializable {
                 ", numero=" + numero +
                 ", nombrePoblacion='" + nombrePoblacion + '\'' +
                 ", provincia='" + provincia + '\'' +
+                //", profesor=" + profesor +
                 '}';
     }
 }

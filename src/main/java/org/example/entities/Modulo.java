@@ -17,7 +17,6 @@ public class Modulo implements Serializable {
     private int horas;
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Profesor profesor;
-    //Faltan el profesor y los alumnos a los que se imparte el modulo.
 
     public Modulo() {
     }
@@ -26,6 +25,13 @@ public class Modulo implements Serializable {
         this.nombre = nombre;
         this.curso = curso;
         this.horas = horas;
+    }
+
+    public Modulo(String nombre, String curso, int horas, Profesor profesor) {
+        this.nombre = nombre;
+        this.curso = curso;
+        this.horas = horas;
+        this.profesor = profesor;
     }
 
     public int getId() {
@@ -60,6 +66,14 @@ public class Modulo implements Serializable {
         this.horas = horas;
     }
 
+    public Profesor getProfesor() {
+        return profesor;
+    }
+
+    public void setProfesor(Profesor profesor) {
+        this.profesor = profesor;
+    }
+
     @Override
     public String toString() {
         return "Modulo{" +
@@ -67,6 +81,7 @@ public class Modulo implements Serializable {
                 ", nombre='" + nombre + '\'' +
                 ", curso='" + curso + '\'' +
                 ", horas=" + horas +
+                ", profesor=" + profesor +
                 '}';
     }
 }

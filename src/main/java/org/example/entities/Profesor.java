@@ -19,11 +19,10 @@ public class Profesor implements Serializable {
     private String segundoApellido;
     @Column(unique = true, length = 9)
     private String telefono;
-    @OneToOne
-    private Direccion direccion;
-    @OneToMany(mappedBy = "modulos")
+    /*@OneToOne
+    private Direccion direccion;*/
+    @OneToMany(mappedBy = "profesor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Modulo> modulos;
-    //Falta la direccion y modulos que imparte.
 
 
     public Profesor() {
@@ -34,6 +33,14 @@ public class Profesor implements Serializable {
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
         this.telefono = telefono;
+    }
+
+    public Profesor(String nombre, String primerApellido, String segundoApellido, String telefono, Set<Modulo> modulos) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.telefono = telefono;
+        this.modulos = modulos;
     }
 
     public int getId() {
@@ -76,6 +83,22 @@ public class Profesor implements Serializable {
         this.telefono = telefono;
     }
 
+    /*public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }*/
+
+    public Set<Modulo> getModulos() {
+        return modulos;
+    }
+
+    public void setModulos(Set<Modulo> modulos) {
+        this.modulos = modulos;
+    }
+
     @Override
     public String toString() {
         return "Profesor{" +
@@ -84,6 +107,7 @@ public class Profesor implements Serializable {
                 ", primerApellido='" + primerApellido + '\'' +
                 ", segundoApellido='" + segundoApellido + '\'' +
                 ", telefono='" + telefono + '\'' +
+                //", direccion=" + direccion +
                 '}';
     }
 }
