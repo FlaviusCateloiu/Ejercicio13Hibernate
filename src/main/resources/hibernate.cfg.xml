@@ -19,5 +19,9 @@
         <property name="show_sql">true</property>
 
         <!-- List of XML mapping files -->
+        <mapping class = "org.example.entities.Alumno"/>
+        <mapping class = "org.example.entities.Direccion"/>
+        <mapping class = "org.example.entities.Modulo"/>
+        <mapping class = "org.example.entities.Profesor"/>
     </session-factory>
 </hibernate-configuration>
