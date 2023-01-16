@@ -1,10 +1,7 @@
 package org.example;
 
-import org.checkerframework.checker.units.qual.A;
 import org.example.entities.*;
-import org.example.repositories.DireccionRepositoryImpl;
-import org.example.repositories.ModuloRepositoryImpl;
-import org.example.repositories.ProfesorRepositoryImpl;
+import org.example.repositories.*;
 
 import java.util.Optional;
 import java.util.Set;
