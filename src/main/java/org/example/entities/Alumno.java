@@ -1,9 +1,10 @@
 package org.example.entities;
 
 import jakarta.persistence.*;
-import org.checkerframework.checker.units.qual.C;
 
 import java.io.Serializable;
+import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "alumnos")
@@ -21,7 +22,8 @@ public class Alumno implements Serializable {
     private String nia;
     @Column(unique = true, length = 9)
     private String telefono;
-    //Falta los modulos a los que asiste el alumno.
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "alumnos")
+    private Set<Modulo> modulos;
 
     public Alumno() {
     }
@@ -32,6 +34,15 @@ public class Alumno implements Serializable {
         this.segundoApellido = segundoApellido;
         this.nia = nia;
         this.telefono = telefono;
+    }
+
+    public Alumno(String nombre, String primerApellido, String segundoApellido, String nia, String telefono, Set<Modulo> modulos) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.nia = nia;
+        this.telefono = telefono;
+        this.modulos = modulos;
     }
 
     public int getId() {
@@ -82,6 +93,14 @@ public class Alumno implements Serializable {
         this.telefono = telefono;
     }
 
+    public Set<Modulo> getModulos() {
+        return modulos;
+    }
+
+    public void setModulos(Set<Modulo> modulos) {
+        this.modulos = modulos;
+    }
+
     @Override
     public String toString() {
         return "Alumno{" +
@@ -90,7 +109,18 @@ public class Alumno implements Serializable {
                 ", primerApellido='" + primerApellido + '\'' +
                 ", segundoApellido='" + segundoApellido + '\'' +
                 ", nia='" + nia + '\'' +
-                ", telefono='" + telefono + '\'' +
+                ", telefono='" + telefono +
                 '}';
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(this.nia, alumno.nia);
     }
 }

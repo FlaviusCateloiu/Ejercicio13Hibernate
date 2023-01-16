@@ -19,9 +19,10 @@ public class Profesor implements Serializable {
     private String segundoApellido;
     @Column(unique = true, length = 9)
     private String telefono;
-    /*@OneToOne
-    private Direccion direccion;*/
-    @OneToMany(mappedBy = "profesor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+    @PrimaryKeyJoinColumn
+    private Direccion direccion;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "profesor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Modulo> modulos;
 
 
@@ -40,6 +41,23 @@ public class Profesor implements Serializable {
         this.primerApellido = primerApellido;
         this.segundoApellido = segundoApellido;
         this.telefono = telefono;
+        this.modulos = modulos;
+    }
+
+    public Profesor(String nombre, String primerApellido, String segundoApellido, String telefono, Direccion direccion) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+
+    public Profesor(String nombre, String primerApellido, String segundoApellido, String telefono, Direccion direccion, Set<Modulo> modulos) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+        this.telefono = telefono;
+        this.direccion = direccion;
         this.modulos = modulos;
     }
 
@@ -83,13 +101,13 @@ public class Profesor implements Serializable {
         this.telefono = telefono;
     }
 
-    /*public Direccion getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
-    }*/
+    }
 
     public Set<Modulo> getModulos() {
         return modulos;
@@ -107,7 +125,7 @@ public class Profesor implements Serializable {
                 ", primerApellido='" + primerApellido + '\'' +
                 ", segundoApellido='" + segundoApellido + '\'' +
                 ", telefono='" + telefono + '\'' +
-                //", direccion=" + direccion +
+                ", direccion=" + direccion +
                 '}';
     }
 }

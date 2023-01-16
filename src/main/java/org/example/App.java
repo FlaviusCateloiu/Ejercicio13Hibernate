@@ -1,18 +1,28 @@
 package org.example;
 
+import org.checkerframework.checker.units.qual.A;
 import org.example.entities.*;
+import org.example.repositories.DireccionRepositoryImpl;
 import org.example.repositories.ModuloRepositoryImpl;
 import org.example.repositories.ProfesorRepositoryImpl;
 
 import java.util.Optional;
+import java.util.Set;
 
 public class App {
     public static void main( String[] args ) {
-        Profesor p1 = new Profesor("Pepe", "Antonio", "Manteca", "876423432");
+        Set<Alumno> alums1= null, alums2 = null, alums3 = null;
+        alums1.add(new Alumno("Manolo", "Lucas", "Picos", "98742332D", "978453453"));
+        alums2.add(new Alumno("Ismael", "Bizmal", "Tipus", "92743423D", "948543234"));
+        alums3.add(new Alumno("Roberto", "Raul", "Rodriguez", "11232343D", "789234657"));
 
-        Modulo m1 = new Modulo("Matematicas", "3ESO", 8, p1);
-        Modulo m2 = new Modulo("Fisica y Quimica", "4ESO", 6, p1);
-        Modulo m3 = new Modulo("Educacion Fisica", "1ESO", 3, p1);
+        Direccion d1 = new Direccion("Bolivares", 45, "Burriana", "Castellon");
+
+        Profesor p1 = new Profesor("Pepe", "Antonio", "Manteca", "876423432", d1);
+
+        Modulo m1 = new Modulo("Matematicas", "3ESO", 8, p1, alums1);
+        Modulo m2 = new Modulo("Fisica y Quimica", "4ESO", 6, p1, alums3);
+        Modulo m3 = new Modulo("Educacion Fisica", "1ESO", 3, p1, alums2);
 
         ModuloRepositoryImpl modulos = new ModuloRepositoryImpl();
 
