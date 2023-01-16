@@ -94,7 +94,6 @@ public class Direccion implements Serializable {
                 ", numero=" + numero +
                 ", nombrePoblacion='" + nombrePoblacion + '\'' +
                 ", provincia='" + provincia + '\'' +
-                ", profesor=" + profesor +
                 '}';
     }
 }
