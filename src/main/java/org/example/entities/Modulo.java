@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.checkerframework.checker.units.qual.C;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ public class Modulo implements Serializable {
     private Profesor profesor;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Alumno> alumnos;
+    private Set<Alumno> alumnos = new HashSet<>();
 
     public Modulo() {
     }
@@ -117,6 +118,7 @@ public class Modulo implements Serializable {
         alumno.getModulos().remove(this);
     }
 
+    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -126,5 +128,10 @@ public class Modulo implements Serializable {
         }
         Modulo modulo = (Modulo) o;
         return Objects.equals(this.nombre, modulo.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.nombre);
     }
 }

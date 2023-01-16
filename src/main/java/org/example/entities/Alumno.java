@@ -3,6 +3,7 @@ package org.example.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ public class Alumno implements Serializable {
     @Column(unique = true, length = 9)
     private String telefono;
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "alumnos")
-    private Set<Modulo> modulos;
+    private Set<Modulo> modulos = new HashSet<>();
 
     public Alumno() {
     }
@@ -111,16 +112,5 @@ public class Alumno implements Serializable {
                 ", nia='" + nia + '\'' +
                 ", telefono='" + telefono +
                 '}';
-    }
-
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Alumno alumno = (Alumno) o;
-        return Objects.equals(this.nia, alumno.nia);
     }
 }

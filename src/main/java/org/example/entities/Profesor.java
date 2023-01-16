@@ -3,6 +3,7 @@ package org.example.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -23,7 +24,7 @@ public class Profesor implements Serializable {
     @PrimaryKeyJoinColumn
     private Direccion direccion;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "profesor", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Modulo> modulos;
+    private Set<Modulo> modulos = new HashSet<>();
 
 
     public Profesor() {
