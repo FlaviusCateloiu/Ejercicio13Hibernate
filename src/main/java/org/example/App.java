@@ -22,7 +22,7 @@ public class App {
         Modulo m2 = new Modulo("Fisica y Quimica", "4ESO", 6, p1);
         m2.anyadirAlumno(alum3);
         Modulo m3 = new Modulo("Educacion Fisica", "1ESO", 3, p1);
-        m3.anyadirAlumno(alum2);
+        m3.anyadirAlumno(alumError);
 
         ModuloRepositoryImpl modulos = new ModuloRepositoryImpl();
 

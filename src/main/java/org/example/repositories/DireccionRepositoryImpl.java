@@ -1,5 +1,6 @@
 package org.example.repositories;
 
+import jakarta.persistence.OptimisticLockException;
 import org.example.entities.Direccion;
 import org.example.utils.HibernateUtil;
 import org.hibernate.Session;
@@ -46,8 +47,12 @@ public class DireccionRepositoryImpl implements Repository<Direccion> {
     @Override
     public void delete(Direccion direccion) {
         s.getTransaction().begin();
-        s.remove(direccion);
-        s.getTransaction().commit();
+        try {
+            s.remove(direccion);
+            s.getTransaction().commit();
+        } catch (OptimisticLockException e) {
+            System.err.println("*******Error no se puede borrar un Direccion que no existe.*******");
+        }
     }
 
     public void close() {

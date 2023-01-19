@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7265752d-dcff-4e33-8b35-adac454b2bd8" name="Changes" comment="Me falta comprobar si existe el alumno o no">
+    <list default="true" id="7265752d-dcff-4e33-8b35-adac454b2bd8" name="Changes" comment="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Modulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Modulo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Profesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Profesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/AlumnoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/AlumnoRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/DireccionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/DireccionRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/ModuloRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/ModuloRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/ProfesorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/ProfesorRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,9 @@
       <workItem from="1673360174438" duration="5000" />
       <workItem from="1673532993119" duration="8760000" />
       <workItem from="1673618995656" duration="5000" />
-      <workItem from="1673881301649" duration="8982000" />
+      <workItem from="1673881301649" duration="9262000" />
+      <workItem from="1673896253931" duration="13000" />
+      <workItem from="1674139806159" duration="1760000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1673286098640</created>
@@ -123,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673887366883</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases.">
+      <created>1673892057425</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673892057425</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +156,7 @@
     <MESSAGE value="Sigo con las Entidades" />
     <MESSAGE value="Falta en las Entidades lo de OneToOne y ManyToMany y he hecho lo de Repository lo basico." />
     <MESSAGE value="Me falta comprobar si existe el alumno o no" />
-    <option name="LAST_COMMIT_MESSAGE" value="Me falta comprobar si existe el alumno o no" />
+    <MESSAGE value="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases." />
   </component>
 </project>
