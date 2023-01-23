@@ -5,7 +5,7 @@ import org.checkerframework.checker.units.qual.C;
 
 import java.io.Serializable;
 @Entity
-@Table(name = "alumnos")
+@Table(name = "direcciones")
 public class Direccion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

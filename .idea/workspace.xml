@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7265752d-dcff-4e33-8b35-adac454b2bd8" name="Changes" comment="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases.">
+    <list default="true" id="7265752d-dcff-4e33-8b35-adac454b2bd8" name="Changes" comment="Por ahora tengo cositas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/AlumnoRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/AlumnoRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/DireccionRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/DireccionRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/ModuloRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/ModuloRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repositories/ProfesorRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repositories/ProfesorRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/Direccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/Direccion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/repositories/DireccionRepositoryImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,7 +75,8 @@
       <workItem from="1673618995656" duration="5000" />
       <workItem from="1673881301649" duration="9262000" />
       <workItem from="1673896253931" duration="13000" />
-      <workItem from="1674139806159" duration="1760000" />
+      <workItem from="1674139806159" duration="3779000" />
+      <workItem from="1674489039020" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1673286098640</created>
@@ -133,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673892057425</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Por ahora tengo cositas">
+      <created>1674141583935</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674141583935</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +165,7 @@
     <MESSAGE value="Falta en las Entidades lo de OneToOne y ManyToMany y he hecho lo de Repository lo basico." />
     <MESSAGE value="Me falta comprobar si existe el alumno o no" />
     <MESSAGE value="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Me falta introducir las clases hashCode() y equals() en Modulos y las demas clases." />
+    <MESSAGE value="Por ahora tengo cositas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Por ahora tengo cositas" />
   </component>
 </project>
